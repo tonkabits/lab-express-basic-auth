@@ -7,13 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>{{title}}</title>
     <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
   </head>
 
-  <body>
+  <body class="p-0">
+    <div class="menu flex items-center justify-around uppercase list-none w-100 bg-blue-300 text-blue-900 h-16">
+      <li class="flex items-center"><span class="text-lg"><a class="hover:no-underline hover:text-yellow-700"
+            href="/">Home</a></span></li>
+      <li class="flex items-center"><span class="text-lg"><a class="hover:no-underline hover:text-yellow-700"
+            href="/auth/login">Login</a></span></li>
+      <li class="flex items-center"><span class="text-lg"><a class="hover:no-underline hover:text-yellow-700"
+            href="/auth/register">Register</a></span></li>
+    </div>
+    <div class="container">
+      {{{body}}}
+    </div>
 
-    {{{body}}}
-
-    <script src="/js/script.js"></script>
   </body>
 
 </html>
